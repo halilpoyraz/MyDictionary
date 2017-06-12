@@ -1,0 +1,2 @@
+# MyDictionary
+Kişisel Sözlük Uygylaması
