@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyDictionary.Views.InsertPage">
+    <ContentPage.Content>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Add New Word">
+                    <ViewCell>
+                        <Picker x:Name="pckrLanguage" Title="Language" >
+                            <Picker.Items>
+                                <x:String>İngilizce</x:String>
+                                <x:String>Alamanca</x:String>
+                                <x:String>Fransızca</x:String>
+                                <x:String>İspanyolca</x:String>
+                                <x:String>Farsça</x:String>
+                                <x:String>Japonca</x:String>
+                                <x:String>İtalyanca</x:String>
+                                <x:String>Yunanca</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </ViewCell>
+                    <ViewCell>
+                        <Picker x:Name="pckrType" Title="Type" >
+                            <Picker.Items>
+                                <x:String>Sıfat</x:String>
+                                <x:String>Fiil</x:String>
+                                <x:String>İsim</x:String>
+                                <x:String>Zamir</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </ViewCell>
+                    <EntryCell Label="Word" x:Name="txtWord"></EntryCell>
+                    <EntryCell Label="Meaning" x:Name="txtMeaning"></EntryCell>
+                    <EntryCell Label="W_SampleSentence" x:Name="txtW_SampleSentence"></EntryCell>
+                    <EntryCell Label="M_SampleSentence" x:Name="txtM_SampleSentence"></EntryCell>
+                    <ViewCell>
+                        <Button Text="Ekle" Clicked="onInsert"></Button>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

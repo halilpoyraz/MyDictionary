@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyDictionary.Views.ListPage">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Refresh" Activated="onMenuRefresh" Order="Secondary" Priority="1"></ToolbarItem>
+        <ToolbarItem Name="Add Word" Activated="onMenuInsert" Order="Secondary" Priority="0"></ToolbarItem>
+        <ToolbarItem Name="Lists" Order="Secondary" Priority="2"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="txtSearch" Placeholder="Search Words" TextColor="DarkBlue" TextChanged="onTextChanged"></SearchBar>
+            <ListView x:Name="lstDictionary" ItemsSource="{Binding .}" ItemSelected="onSelected" IsPullToRefreshEnabled="True" Refreshing="onRefresh">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Word}" TextColor="DarkRed" Detail="{Binding Meaning}" DetailColor="DarkGreen">
+                        <TextCell.ContextActions>
+                            <MenuItem CommandParameter="{Binding Id}" Text="Delete" IsDestructive="True" Clicked="onMenuDelete"></MenuItem>
+                        </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
