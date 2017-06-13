@@ -10,7 +10,7 @@ namespace MyDictionary
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ListPage());
+            MainPage = new NavigationPage(new MasterPage());
         }
 
         protected override void OnStart()
