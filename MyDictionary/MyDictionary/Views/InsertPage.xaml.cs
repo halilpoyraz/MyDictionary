@@ -23,7 +23,7 @@ namespace MyDictionary.Views
         {
             SQLiteManager manager = new SQLiteManager();
             Dictionary _dictionary = new Dictionary();
-
+            
             _dictionary.Language = pckrLanguage.SelectedItem.ToString();
             _dictionary.Type = pckrType.SelectedItem.ToString();
             _dictionary.Word = txtWord.Text;

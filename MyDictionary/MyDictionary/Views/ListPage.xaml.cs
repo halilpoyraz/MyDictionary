@@ -72,9 +72,9 @@ namespace MyDictionary.Views
 
         private void onTextChanged(object sender, TextChangedEventArgs e)
         {
-            if (e.NewTextValue.Length>3)
+            if (e.NewTextValue.Length > 3)
             {
-                lstDictionary.BindingContext = e.NewTextValue;       
+                lstDictionary.BindingContext = e.NewTextValue;
             }
             else if (string.IsNullOrEmpty(e.NewTextValue))
             {
